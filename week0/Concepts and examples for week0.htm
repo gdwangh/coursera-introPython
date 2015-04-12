@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html class="supports-svg" xmlns:fb="http://ogp.me/ns/fb#" itemtype="http://schema.org"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7"><meta name="fragment" content="!"><meta name="robots" content="NOODP"><meta charset="utf-8"><meta property="og:title" content="Coursera"><meta property="og:type" content="website"><meta property="og:image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta property="og:url" content="https://www.coursera.org/wiki/view?page=week0"><meta property="og:site_name" content="Coursera"><meta property="og:locale" content="en_US"><meta property="og:description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta property="fb:admins" content="727836538,4807654"><meta property="fb:app_id" content="274998519252278"><meta name="twitter:site" content="Coursera"><meta name="twitter:app:name:iphone" content="Coursera"><meta name="twitter:app:name:ipad" content="Coursera"><meta name="twitter:app:name:googleplay" content="Coursera"><meta name="twitter:app:id:iphone" content="id736535961"><meta name="twitter:app:id:ipad" content="id736535961"><meta name="twitter:app:id:googleplay" content="org.coursera.android"><meta name="description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta name="image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta name="apple-itunes-app" content="app-id=736535961"><title>Coursera</title>    <link href="Concepts%20and%20examples%20for%20week0_files/spark.css" rel="stylesheet" type="text/css">
+      <link href="Concepts%20and%20examples%20for%20week0_files/course.css" rel="stylesheet" type="text/css">
+    <link href="https://spark-public.s3.amazonaws.com/interactivepython2/static/images/favicon.ico" rel="icon">
+<script src="Concepts%20and%20examples%20for%20week0_files/ga.js" async="" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/MathJax.js" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/routes.js" data-requiremodule="pages/spark/routes" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script src="Concepts%20and%20examples%20for%20week0_files/confirmNavigation.js" data-requiremodule="bundles/confirmNavigation/nls/zh/confirmNavigation" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/moment.js" data-requiremodule="js/lib/nls/zh/moment.lang" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/popup.js" data-requiremodule="bundles/helpwidget/nls/zh/popup" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><meta content="summary" name="twitter:card"><meta content="Coursera" name="twitter:title"><meta content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits." name="twitter:description"><meta content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png" name="twitter:image:src"><script src="Concepts%20and%20examples%20for%20week0_files/204.js" data-requiremodule="js/lib/204" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/student-page_003.js" data-requiremodule="pages/spark/views/template/student-page" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/student-page_002.js" data-requiremodule="pages/spark/views/template/student-page.html" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/sparkSurveyQuestionsSessionModel.js" data-requiremodule="bundles/assess/assessmentTypes/sparkSurveyQuestions/sparkSurveyQuestionsSessionModel" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/sessionModel.js" data-requiremodule="bundles/assess/assessmentTypes/quickQuestions/sessionModel" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/SessionModel.js" data-requiremodule="bundles/assess/assessmentTypes/SessionModel" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/QuestionCollection.js" data-requiremodule="bundles/assess/framework/QuestionCollection" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/QuestionModel.js" data-requiremodule="bundles/assess/framework/QuestionModel" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/student-page.js" data-requiremodule="pages/spark/views/template/nls/student-page" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/backbone.js" data-requiremodule="bundles/assess/lib/backbone.hascollections" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/underscore.js" data-requiremodule="js/lib/underscore.extend" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/header_002.js" data-requiremodule="pages/spark/views/template/header" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/sidebar_003.js" data-requiremodule="pages/spark/views/template/sidebar" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/readme.js" data-requiremodule="js/lib/readme" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/header.js" data-requiremodule="pages/spark/views/template/header.html" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/LearnerStoriesCollection.js" data-requiremodule="pages/analytics/models/LearnerStoriesCollection" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/assessApi.js" data-requiremodule="pages/spark-survey/assessApi" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/sidebar_004.js" data-requiremodule="pages/spark/views/template/sidebar.html" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/signature_track.js" data-requiremodule="spark/app/signature/js/signature_track" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/header_003.js" data-requiremodule="pages/spark/views/template/nls/header" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/sidebar_002.js" data-requiremodule="pages/spark/views/template/nls/sidebar" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/LearnerStoryModel.js" data-requiremodule="pages/analytics/models/LearnerStoryModel" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/signatureTrackLastChanceModal.js" data-requiremodule="spark/app/signature/js/signatureTrackLastChanceModal.html" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/flexjoinLastChanceModal.js" data-requiremodule="spark/app/signature/js/flexjoinLastChanceModal.html" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/util.js" data-requiremodule="js/lib/util" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/path.js" data-requiremodule="js/lib/path" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/header_004.js" data-requiremodule="pages/spark/views/template/nls/zh/header" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="Concepts%20and%20examples%20for%20week0_files/sidebar.js" data-requiremodule="pages/spark/views/template/nls/zh/sidebar" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -1px -1px 1px -1px; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head><body><div class="course-signaturetrack-topbanner">  <span class="course-signaturetrack-topbanner-close">    <a href="#">×</a>  </span>  <span class="course-signaturetrack-topbanner-text">The "Fundamentals of Computing" Specialization  </span>  <span class="course-signaturetrack-topbanner-button">    <a target="_new" href="https://www.coursera.org/specialization/fundamentalscomputing2/37?utm_source=spark&amp;utm_medium=banner">Learn More</a>  </span></div><div style="display: none;" id="MathJax_Message"></div><div id="fb-root"></div><div id="spark-help" class="hide"></div><a href="https://learner.coursera.help/hc/requests/new" target="_blank"><div style="z-index: 1" data-networkprioritysupportwidget="" role="button" class="helpwidget-tab hide">Premium Support</div></a><!-- - track IE8 and less browser for eventing purposes--><!--[if lte IE 8]><script>window._204 = window._204 || [];
+window._gaq = window._gaq || [];
+window._gaq.push(
+    ['_setAccount', 'UA-28377374-1'],
+    ['_setDomainName', window.location.hostname],
+    ['_setAllowLinker', true],
+    ['_trackPageview', window.location.pathname]);
+window._204.push(
+  ['client', 'home'],
+  {key:"pageview", value:window.location.pathname});</script><script src="https://dw0ugk4msqulk.cloudfront.net/45a2e13c4a910d8569cd8a8a3f7f8565d720bcee/js/lib/204.js"></script><script src="https://ssl.google-analytics.com/ga.js"></script><![endif]--><div id="fb-root"></div><div id="origami" data-js="origami"><div><div><div class="coursera-page"><div class="coursera-header" role="menubar"><div class="hidden">本页面使用了 MathJax 提供的技术来呈现数学公式。
+如果您正在使用屏幕阅读器，请访问<a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a>下载浏览器插件。请注意，目前插件仅支持 Internet Explorer 浏览器。</div><h1 class="hidden">An Introduction to Interactive Programming in Python (Part 2)</h1><!-- UNTIL dashboard announcement expires 2014-12-01 (then delete this code)--><div class="helpcenter-announcement"><div style="visibility: visible; display: none;" class="readme" data-readme="helpcenter-announcement" data-readme-show-count="1" data-readme-show-until-closed="data-readme-show-until-closed" data-readme-expires="Mar 31, 2015"><div>需要技术支持？请访问我们最新的 <a href="https://learner.coursera.help/" data-readme-close="data-readme-close">学生帮助中心</a></div><div data-readme-close="data-readme-close" class="readme-close-icon"><span class="icon-remove"></span></div></div></div><div role="banner" class="course-topbar container-fluid"><div class="row-fluid"><div class="span3"><a href="https://www.coursera.org/" data-if-linkable="add-referrer" class="course-topbar-logo"></a></div><div style="float:right;" class="course-topbar-nav-container span9"><h2 class="hidden">顶部导航栏</h2><ul class="course-topbar-nav-list"><li class="course-topbar-nav-list-item"><a href="https://www.coursera.org/courses" data-if-linkable="add-referrer">课程</a></li><li tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" aria-owns="course-topbar-my" data-popup="#course-topbar-my" data-popup-bind-open="mouseenter" data-popup-close="data-popup-close" style="cursor:pointer;" data-popup-direction="se" class="course-topbar-nav-list-item"><a data-user-id="6504779">wang hui<i class="icon-caret-down"></i></a></li></ul></div></div><div id="course-topbar-aboutus" class="course-topbar-sublist"><a href="https://www.coursera.org//about/" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">关于我们</a><a href="https://www.coursera.org//about/careers" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">工作机会</a><a href="https://www.coursera.org//about/people" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">团队</a><a href="https://www.coursera.org//about/contact" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">联系我们</a></div><div id="course-topbar-my" class="course-topbar-sublist"><a data-popup-close="data-popup-close" href="https://www.coursera.org/" target="_new" class="course-topbar-sublist-item">我的课程</a><a data-popup-close="data-popup-close" href="https://www.coursera.org/account/profile" target="_new" class="course-topbar-sublist-item">个人资料</a><a data-popup-close="data-popup-close" href="https://www.coursera.org/account/accomplishments" target="_new" class="course-topbar-sublist-item">课程记录</a><a href="https://www.coursera.org/account/settings" target="_new" class="course-topbar-sublist-item">设置</a><a href="https://class.coursera.org/interactivepython2-002/class/preferences" class="course-topbar-sublist-item">课程选项</a><a href="https://class.coursera.org/interactivepython2-002/auth/logout" class="course-topbar-sublist-item">退出</a></div></div><div class="course-topbanner-wrapper"><div class="course-topbanner"><div class="course-topbanner-university-logo"><a href="https://www.coursera.org/rice" target="_blank" data-if-linkable="add-referrer" title="https://www.coursera.org/rice" class="coursera-university-color"><img src="Concepts%20and%20examples%20for%20week0_files/university_logo.png" alt="rice"></a></div><div style="margin-top: 0; margin-right: 0" class="course-signaturetrack"><div class="course-signaturetrack-topbanner-side-join"><a style="color: black;" href="https://www.coursera.org/signature/course/interactivepython2/974637" target="_blank"><div style="background-color: #F3CC57; border: 1px solid red" role="button" aria-haspopup="true" aria-expanded="false" aria-owns="signature-track-photo-id-status" data-popup-offset-y="15" data-popup-offset-x="0" data-popup="#signature-track-photo-id-status" data-popup-bind-open="mouseenter" data-popup-direction="w" class="course-signaturetrack-bannerbox"><div class="coursera-signaturetrack-topbanner">Secure Your Verified Certificate</div><div class="course-signaturetrack-bannerbox-daysleft">仅剩5 days and 9 hours可以<u>付费</u></div></div></a><div id="signature-track-photo-id-status" style="width: 160px;" class="course-topbar-sublist"><div style="border-color: white" class="course-signaturetrack-sublist-arrow"><a style="text-decoration: none;" href="https://www.coursera.org/signature/course/interactivepython2/974637?riskfree=1" target="_blank"><div target="_blank" class="course-topbar-sublist-item"> 点击了解更多</div></a></div></div></div></div><h1 class="course-topbanner-header"><a href="https://class.coursera.org/interactivepython2-002/" data-if-linkable="modal-lock" class="course-topbanner-name coursera-university-color">An Introduction to Interactive Programming in Python (Part 2)</a><br><span style="" class="course-topbanner-instructor">教授 Joe Warren, Scott Rixner, John Greiner, Stephen Wong</span></h1></div></div></div><div style="position:relative;" class="container-fluid"><div class="row-fluid"><div id="course-page-sidebar" role="navigation"><div class="coursera-sidebar" role="menubar"><div id="course-page-sidebar" role="navigation"><div class="course-navbar-container"><a href="https://class.coursera.org/interactivepython2-002" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_index"><img src="Concepts%20and%20examples%20for%20week0_files/logo.png" style="width: 205px;height: 116px;margin: -15px 0px 8px 1px; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);" alt="Course Home Page"></a><div data-coursera-course-search-nav-widget="data-coursera-course-search-nav-widget" class="input-append course-search-nav-box"><form method="get" action="/interactivepython2-002/class/search" data-js-search-form="data-js-search-form" class="form-inline minimized-search"><label for="course-search-nav-input" class="accessible-text-for-reader">在本课程内搜索</label><input id="course-search-nav-input" name="q" data-js-search-input="data-js-search-input" type="text">&nbsp;<button type="submit" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="search" class="btn icon-search"><span class="accessible-text-for-reader">搜索</span></button></form></div><h2 class="hidden">侧边导航栏</h2><ul class="course-navbar-list"><li class="course-navbar-item in-class-qqs-tab"><a href="https://class.coursera.org/interactivepython2-002/questions" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_" class="coursera-university-color"><span>简单问题</span><span></span><span class="in-class-qqs-number-display">15</span></a><div class="in-class-qqs-announcement"><div class="readme" data-readme="in-class-qqs-announcement-interactivepython2-002" data-readme-show-count="1" data-readme-show-until-closed="data-readme-show-until-closed" data-readme-type="custom"><div class="arrow-left"></div><div class="readme-content"><span>请回答下面简短问题，帮助我们改进课程！</span></div><div data-readme-close="data-readme-close" class="readme-close-icon"><span class="icon-remove"></span></div></div></div></li><li class="course-navbar-item in-class-qqs-tab"></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/class/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Home" class="coursera-university-color"><span>Home </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/quiz/index?quiz_type=survey" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Surveys" class="coursera-university-color"><span>Surveys </span><span></span></a></li><li class="course-navbar-item"><h3>Class</h3></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/lecture/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Video_Lectures" class="coursera-university-color"><span>Video Lectures </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/quiz/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Quizzes" class="coursera-university-color"><span>Quizzes </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/human_grading/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Mini-projects" class="coursera-university-color"><span>Mini-projects </span><span></span></a></li><li class="course-navbar-item"><h3>Tools</h3></li><li class="course-navbar-item"><a href="http://www.codeskulptor.org/" target="_blank" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_CodeSkulptor" class="coursera-university-color"><span>CodeSkulptor </span><span class="icon-share"></span><span class="accessible-text-for-reader">在浏览器新标签页中打开</span></a></li><li class="course-navbar-item"><a href="http://codeskulptor.org/viz" target="_blank" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Viz_Mode" class="coursera-university-color"><span>Viz Mode </span><span class="icon-share"></span><span class="accessible-text-for-reader">在浏览器新标签页中打开</span></a></li><li class="course-navbar-item"><h3>Practice and Help</h3></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/forum/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Discussion_Forums" class="coursera-university-color"><span>Discussion Forums </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/wiki/overview" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Concepts_and_Examples" class="coursera-university-color"><span>Concepts and Examples </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/wiki/practice_overview" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Practice_Exercises" class="coursera-university-color"><span>Practice Exercises </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/wiki/viz_overview" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Viz_Mode_Tutorial" class="coursera-university-color"><span>Viz Mode Tutorial </span><span></span></a></li><li class="course-navbar-item"><h3>Administrivia</h3></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/wiki/honorcode" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Honor_Code_(Please_read!)" class="coursera-university-color"><span>Honor Code (Please read!) </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/wiki/faq" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_FAQ" class="coursera-university-color"><span>FAQ </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/wiki/syllabus" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Syllabus" class="coursera-university-color"><span>Syllabus </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/interactivepython2-002/wiki/coursestaff" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Course_Staff" class="coursera-university-color"><span>Course Staff </span><span></span></a></li></ul><ul style="list-style-type:none;margin-left: 10px;"><li><a href="https://accounts.coursera.org/i/zendesk/courserahelp?return_to=https://learner.coursera.help/hc/" target="_blank" title="Open help articles in new window" class="coursera-university-color"><i class="icon-question-sign"></i>Help Center</a></li></ul><ul style="list-style-type:none;margin-left: 10px;"></ul></div></div></div></div><div id="course-page-content" role="main"><div style="display: block;" id="spark" class="hide">
+<h2 class="course-page-header">
+    Week zero    <a class="coursera-reporter-link" title="Click here if you're experiencing technical problems or found errors in the course materials." target="_blank" href="https://accounts.coursera.org/i/zendesk/courserahelp?return_to=https://learner.coursera.help/hc/">
+      Help Center
+    </a>
+    <a data-coursera-admin-helpwidget-link="" rel="help" href="https://class.coursera.org/mooc/help/pages/setup" title="Course Page Setup" style="display:none;">Learn more.</a>
+</h2>
+
+<dl>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<dt> <b>Comments</b> — CodeSkulptor
+</dt>
+<dd> 
+<ul>
+<li> Non-computational parts of the program that textually describe the behavior of the program. </li>
+<li> Comments begin with <code>#</code>, everything to right of the hash is ignored by Python. </li>
+<li> Comments should be frequent so you and others can understand the code. </li>
+<li> Lecture examples - <a href="http://www.codeskulptor.org/"> CodeSkulptor </a> </li>
+<li> More examples - <a href="http://www.codeskulptor.org/#examples-more-1a_codeskulptor-prints_strings_comments.py" title="Link: http://www.codeskulptor.org/#examples-more-1a_codeskulptor-prints_strings_comments.py"> Comments, Strings, and Print </a> </li>
+</ul>
+</dd>
+
+<dt> <b> Strings </b> — CodeSkulptor
+</dt>
+<dd> 
+<ul>
+<li> Sequence of characters enclosed by a pair of single or double quotes </li>
+<li> Examples are <code>"cats hate dogs"</code> and <code>'Strings are fun!'</code>. </li>
+<li> Strings are one kind of data in Python.  Their data type is denoted <code>str</code>. </li>
+<li> Lecture examples - <a href="http://www.codeskulptor.org/#examples-hello_world.py"> Hello World </a> </li>
+<li> More examples - <a href="http://www.codeskulptor.org/#examples-more-1a_codeskulptor-prints_strings_comments.py"> Comments, Strings, and Print </a>
+</li>
+</ul>
+</dd>
+
+<dt> <b>Numbers</b> — Arithmetic Expressions
+</dt>
+<dd> 
+<ul>
+<li> There are two kinds of numerical data in Python: integers and decimal numbers.
+</li>
+<li> Integers correspond to the data type <code>int</code>. Decimal numbers are represented by floating-point numbers 
+corresponding to the data type <code>float</code>. </li>
+<li> Floating-point numbers have around 15 decimal digits of accuracy. </li>
+<li> In CodeSkulptor, all numbers (even integers) are represented internally as floating-point numbers. </li>
+<li> Lecture examples - <a href="http://www.codeskulptor.org/#examples-arithmetic_expressions.py" title="Link: http://www.codeskulptor.org/#examples-arithmetic_expressions.py"> Arithmetic Expressions </a> </li>
+<li> More examples - <a href="http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-floats_and_ints.py" title="Link: http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-floats_and_ints.py"> Floats and Ints </a> </li>
+</ul>
+</dd>
+
+<dt> <b>Arithmetic Operators</b> — Arithmetic Expressions
+</dt>
+<dd> 
+<ul>
+<li>Five basic arithmetic operators; addition (<code>+</code>), subtraction 
+(<code>-</code>), multiplication (<code>*</code>), division (<code>/</code>) 
+and exponentiation (<code>**</code>) </li>
+<li>CodeSkulptor implements a subset of Python 2. In Python 2, the division operator (<code>/</code>)
+ returns a float approximation to the exact answer if either of the 
+operands is a &nbsp;float. &nbsp;If both operands are integers, division
+ returns the exact answer round down to the nearest integer.</li>
+<li> The integer division operator&nbsp;<code>//</code>&nbsp;returns the quotient of two numbers.. </li>
+<li> Lecture examples - <a href="http://www.codeskulptor.org/#examples-arithmetic_expressions.py" title="Link: http://www.codeskulptor.org/#examples-arithmetic_expressions.py"> Arithmetic Expressions </a> </li>
+<li> More examples -  <a href="http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-operations.py" title="Link: http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-operations.py"> Arithmetic Operations</a>,
+						 <a href="http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-division.py" title="Link: http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-division.py"> Division</a>
+</li>
+</ul>
+</dd>
+
+<dt> <b>Arithmetic Expressions</b> — Arithmetic Expressions 
+</dt>
+<dd> 
+<ul>
+<li> An arithmetic expression is either a number or an operator applied to two arithmetic 
+
+expressions.
+</li>
+<li> Arithmetic expressions are entered as a sequence of numbers and arithmetic operators.
+</li>
+<li> Expressions are formed by grouping operators and operands via precedence: "Please 
+
+excuse my dear Aunt Sallie"; 
+parentheses, exponentiation, 
+multiplication, division, addition, subtraction.
+</li>
+<li> Lecture examples - <a href="http://www.codeskulptor.org/#examples-arithmetic_expressions.py"> Arithmetic Expressions </a> </li>
+<li> More examples - <a href="http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-order_of_operations.py" title="Link: http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-order_of_operations.py"> Order of Operations for Arithmetic Expressions</a>,
+						 <a href="http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-errors.py" title="Link: http://www.codeskulptor.org/#examples-more-1a_arithmetic_expressions-errors.py"> Possible Errors for Arithmetic Expressions</a>
+</li>
+
+</ul>
+</dd>
+<dt> <b>Variables</b> — Variables
+</dt>
+<dd> 
+<ul>
+<li>  Variable names consist of a sequence of letters, number and underscores 
+
+(<code>_</code>).
+</li>
+<li>  Variable names start with a letter or underscore and are case sensitive.
+</li>
+<li>  Single equals (<code>=</code>) is used for assignment to variables. Double equals (<code>==</code>) is used 
+for testing equality. </li>
+<li> Lecture examples - <a href="http://www.codeskulptor.org/#examples-variables.py" title="Link: http://www.codeskulptor.org/#examples-variables.py"> Variables </a> </li>
+<li> More examples - <a href="http://www.codeskulptor.org/#examples-more-1a_variables-names.py"> Variable Naming</a>,
+						 <a href="http://www.codeskulptor.org/#examples-more-1a_variables-assignment.py" title="Link: http://www.codeskulptor.org/#examples-more-1a_variables-assignment.py"> Vabiable Assignment</a>,
+						 <a href="http://www.codeskulptor.org/#examples-more-1a_variables-operations.py" title="Link: http://www.codeskulptor.org/#examples-more-1a_variables-operations.py"> Variable Operations</a>,
+						 <a href="http://www.codeskulptor.org/#examples-more-1a_variables-formulas.py"> Formulas</a>
+</li>
+</ul>
+</dd>
+
+
+</dl><hr>
+<div>
+    <div style="float:left">
+    	    	    </div>
+    <div style="float:right;text-align:right;font-size:10px;">
+    	Created Thu 21 Mar 2013  2:20 AM CST<br>
+    	Last Modified Wed  3 Jul 2013  4:14 AM CST    </div>
+</div>
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "HTML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+</div></div></div></div></div><div class="coursera-footer"></div></div></div></div><!--[if gte IE 9]><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><![endif]-->
+<!--[if lte IE 8]><script>document.getElementById("coursera-loading-nojs").style.display = 'block';</script><![endif]-->
+<!--[if !IE]> --><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><!-- <![endif]--><script>if (/zh/i.test(window.localStorage ? localStorage.getItem('locale') : '') || '{{ locale }}') {
+  document.getElementById('get-browser-zh').style.display = 'block';
+}</script><!--[if !IE]> --><script>document.getElementById('coursera-loading-js').style.display = 'block';</script><!-- <![endif]-->
+    <script src="Concepts%20and%20examples%20for%20week0_files/jquery.js"></script>
+      <script src="Concepts%20and%20examples%20for%20week0_files/loadOrRefreshMathJax.js"></script>
+      <script src="Concepts%20and%20examples%20for%20week0_files/textbook_wiki.js"></script>
+  <script src="Concepts%20and%20examples%20for%20week0_files/require.js"></script><script data-baseurl="https://dw0ugk4msqulk.cloudfront.net/45a2e13c4a910d8569cd8a8a3f7f8565d720bcee/" data-version="45a2e13c4a910d8569cd8a8a3f7f8565d720bcee" data-timestamp="1428622243318" data-debug="0" data-locale="zh_CN" id="_require">if(document.getElementById('coursera-loading-js').style.display == 'block') {
+  (function(el) {
+     require.config({
+       //enforceDefine: true,
+       waitSeconds: 75,
+       baseUrl: el.getAttribute('data-baseurl'),
+       urlArgs: el.getAttribute('data-debug') == '1' ? 'v=' + el.getAttribute('data-timestamp') : '',
+       shim: {
+          'underscore': {
+             exports: '_'
+          },
+          'backbone': {
+             deps: ['underscore', 'jquery'],
+             exports: 'Backbone',
+             init: function(_, $) {
+               Backbone.$ = $;
+               return Backbone;
+             }
+          },
+          'pages/hg/thirdparty/js/backbone.marionette': {
+            deps: ['backbone']
+          },
+          'pages/hg/thirdparty/js/webshims/polyfiller': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/webshims/extras/mousepress': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/webshims/polyfiller']
+          },
+          'pages/hg/thirdparty/js/jquery.throttle': {
+            deps: ['jquery']
+          },
+          'js/lib/jquery.linkify': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/js/bootstrap/alert': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/bootstrap/transition']
+          },
+          'spark/core/js/jquery_ui': {
+            deps: ['jquery']
+          },
+          'spark/core/js/jquery.history': {
+            deps: ['jquery']
+          },
+          'js/lib/bootstrap.tooltip': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/transition': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/tab': {
+            deps: ['jquery']
+          },
+          'bundles/videojs/lib/video.4.3.0': {
+            exports: 'vjs'
+          }
+       },
+       paths: {
+          'q': 'js/vendor/q.v1-0-1',
+          'react-with-addons': 'js/vendor/react-with-addons.v0-12',
+          'jquery':                         'pages/spark/jquery',
+          'underscore':                     'js/vendor/underscore.v1-5-2',
+          'backbone':                       'js/vendor/backbone.v1-1-0',
+          'backbone.relational':            'js/lib/backbone.relational.0.8.6',
+          'i18n':                           'js/lib/i18n._t',
+          'css':                            'js/vendor/require.css.v0-1-2',
+          'memoize':                        'js/lib/require.memoize.v0-0-1',
+          'pages/spark/models/user.json':   'empty:',
+          'pages/spark/models/course.json': 'empty:',
+          'pages/spark/models/navbar.json': 'empty:'
+       },
+       callback: function() {
+                    require(['pages/spark/routes']);
+                },
+       config: {
+         i18n: {
+           locale: (window.localStorage ? localStorage.getItem('locale') : '') || el.getAttribute('data-locale')
+         }
+       }
+     });
+  })(document.getElementById('_require'));
+}
+</script><script>define('pages/spark/models/user.json', [], function(){
+      return JSON.parse("{\"id\":6504779,\"email_address\":\"gdwangh@189.cn\",\"full_name\":\"wang hui\",\"locale\":\"zh_CN\",\"timezone\":\"Asia\\\/Shanghai\",\"access_group_id\":\"4\",\"registration_time\":\"1422365424\",\"last_access_time\":\"1428813534\",\"last_access_ip\":\"119.130.87.115\",\"signature_track_register_time\":\"0\",\"email_announcement\":\"1\",\"email_forum\":\"1\",\"in_signature_track\":\"0\",\"wishes_proctored_exam\":\"0\",\"first_name\":\"wang\",\"permissions\":[\"default\",\"allow_site_access\"],\"group\":\"Student\",\"anonymous\":false,\"forum_title\":\"Student\",\"signature_track_state\":2,\"verified_quizzes\":[\"43\",\"44\",\"45\",\"46\"],\"submitted_quizzes\":[\"43\",\"44\",\"45\",\"46\",\"58\",\"60\",\"61\",\"62\",\"63\",\"64\",\"65\",\"66\",\"69\",\"71\",\"73\",\"83\",\"305\",\"307\",\"311\",\"325\"],\"scheduled_proctored_exam\":null,\"last_chance_modal\":1,\"flexjoin_last_chance_modal\":1,\"flexjoin_state\":1,\"flexjoin_introduced\":true,\"keystroke_complete\":true}");
+  });
+define('pages/spark/models/course.json', [], function(){
+      return JSON.parse("{\"id\":974637,\"isPrivate\":false,\"type\":\"public\",\"name\":\"An Introduction to Interactive Programming in Python (Part 2)\",\"instructor\":\"Joe Warren, Scott Rixner, John Greiner, Stephen Wong\",\"sessionName\":\"interactivepython2-002\",\"externalBaseURL\":\"https:\\\/\\\/www.coursera.org\\\/\",\"shortname\":\"interactivepython2\",\"host\":\"https:\\\/\\\/www.coursera.org\\\/\",\"assetUnversionedLink\":\"https:\\\/\\\/dw0ugk4msqulk.cloudfront.net\\\/\",\"cheggID\":\"\",\"hasLTI\":true,\"badgevilleDomain\":\"\",\"linkable\":false,\"universityShortname\":\"rice\",\"signatureTrackStatus\":{\"signature_track_enabled\":1,\"signature_track_duration_left\":\"5 days and 9 hours\",\"signature_track_duration_left_days\":\"9 hours\",\"signature_track_sign_up_now\":1,\"signature_track_last_chance_dialog\":0,\"flexjoin_last_chance_dialog\":1,\"flexjoin_registration_close_date\":\"18 Apr 2015\"},\"courseURLs\":{\"log_in_link\":\"https:\\\/\\\/www.coursera.org\\\/login?post_redirect=https%3A%2F%2Fwww.coursera.org%2Flogin%3Fuser_action%3Dclass%26course_id%3D974637%26post_redirect%3Dhttps%253A%252F%252Fclass.coursera.org%252Finteractivepython2-002%252Fauth%252Fauth_redirector%253Ftype%253Dlogin%2526subtype%253Dnormal%2526visiting%253D\",\"sign_up_link\":\"https:\\\/\\\/www.coursera.org\\\/signup?enroll_cid=974637&enroll_sn=interactivepython2&enroll_n=An Introduction to Interactive Programming in Python (Part 2)\",\"view_course_info_link\":\"https:\\\/\\\/www.coursera.org\\\/course\\\/interactivepython2\",\"sign_up_link_cant_enroll\":\"https:\\\/\\\/www.coursera.org\\\/signup?post_redirect=https%3A%2F%2Fwww.coursera.org%2Fcourse%2Finteractivepython2\"},\"courseBase\":\"https:\\\/\\\/class.coursera.org\\\/interactivepython2-002\\\/\",\"search\":true,\"hideWiki\":true,\"aceStartRegistrationDate\":\"Thu  1 Jan 1970  8:00 AM CST\",\"aceEndRegistrationDate\":\"Thu  1 Jan 1970  8:00 AM CST\",\"aceExamStartDate\":\"Thu  1 Jan 1970  8:00 AM CST\",\"aceExamEndDate\":\"Thu  1 Jan 1970  8:00 AM CST\",\"aceExamRules\":\"\",\"aceExamDuration\":\"\",\"aceBeforeExam\":false,\"aceAfterExam\":true,\"aceHours\":null,\"aceCreditType\":\"\",\"acePrice\":null,\"aceExamID\":null,\"aceEligible\":false,\"canRegisterForACE\":false,\"specialization\":{\"numCourse\":6,\"image\":\"https:\\\/\\\/d15cw65ipctsrr.cloudfront.net\\\/36\\\/f74e20a2a811e4ba29d775ee5247cc\\\/FoC-Spsn-logo.jpg\",\"id\":37,\"short_name\":\"fundamentalscomputing2\",\"name\":\"Fundamentals of Computing\"},\"supportForums\":true,\"textbooks\":\"\",\"inVideoQuizV2\":false,\"in_flexjoin\":1,\"honorCodeExtraText\":\"\",\"honorCodeCustomTitle\":\"\",\"honorCodeCustomButton\":\"\",\"studentAccessDisabled\":0,\"disableQQs\":false}");
+  });
+  define('pages/spark/models/navbar.json', [], function(){
+      return JSON.parse("{\"items\":[{\"name\":\"Home\",\"icon\":\"home\",\"link_type\":\"circuit\",\"link_data\":\"class:index\"},{\"name\":\"Surveys\",\"icon\":\"quiz\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index?quiz_type=survey\"},{\"name\":\"Class\",\"icon\":\"\",\"link_type\":\"heading\",\"link_data\":\"\"},{\"name\":\"Video Lectures\",\"icon\":\"lecture\",\"link_type\":\"circuit\",\"link_data\":\"lecture:index\"},{\"name\":\"Quizzes\",\"icon\":\"quiz\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index\"},{\"name\":\"Mini-projects\",\"icon\":\"assignment\",\"link_type\":\"circuit\",\"link_data\":\"human_grading:index\"},{\"name\":\"Tools\",\"icon\":\"\",\"link_type\":\"heading\",\"link_data\":\"\"},{\"name\":\"CodeSkulptor\",\"icon\":\"assignment\",\"link_type\":\"window_link\",\"link_data\":\"http:\\\/\\\/www.codeskulptor.org\"},{\"name\":\"Viz Mode\",\"icon\":\"\",\"link_type\":\"window_link\",\"link_data\":\"http:\\\/\\\/codeskulptor.org\\\/viz\"},{\"name\":\"Practice and Help\",\"icon\":\"\",\"link_type\":\"heading\",\"link_data\":\"\"},{\"name\":\"Discussion Forums\",\"icon\":\"forum\",\"link_type\":\"circuit\",\"link_data\":\"forum:index\"},{\"name\":\"Concepts and Examples\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"overview\"},{\"name\":\"Practice Exercises\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"practice_overview\"},{\"name\":\"Viz Mode Tutorial\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"viz_overview\"},{\"name\":\"Administrivia\",\"icon\":\"\",\"link_type\":\"heading\",\"link_data\":\"\"},{\"name\":\"Honor Code (Please read!)\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"honorcode\"},{\"name\":\"FAQ\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"faq\"},{\"name\":\"Syllabus\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"syllabus\"},{\"name\":\"Course Staff\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"coursestaff\"}]}");
+  });
+</script><script>var coursera_enable_new_help_center = true;
+</script><div class="hide confirm-navigation modal"><div class="modal-header"><h3>确定浏览</h3></div><div class="modal-body"><div class="confirm-navigation-message"></div><div>您确定要离开本页面吗？</div></div><div class="modal-footer"><button data-modal-close="data-modal-close" class="btn confirm-navigation-stay">留在本页面</button><button data-modal-close="data-modal-close" class="btn btn-danger confirm-navigation-leave">离开本页面</button></div></div><div style="display: none;" class="coursera-async-message"></div></body></html>
