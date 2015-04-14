@@ -85,6 +85,7 @@ def dist(p,q):
 # Ship class
 ACC = 0.2
 FRACTION = 0.01
+MISSILE_SPEED = 10
 
 class Ship:
     def __init__(self, pos, vel, angle, image, info):
@@ -121,13 +122,19 @@ class Ship:
             speed = math.sqrt(self.vel[0]**2 + self.vel[1]**2)
             self.vel = [speed * vect[0], speed * vect[1]]
                
-        self.vel = [ (self.vel[n] + ACC * self.thrust * vect[n]) * (1-FRACTION) for n in range(2)] 
+        self.vel = [ (self.vel[i] + ACC * self.thrust * vect[i]) * (1-FRACTION) for i in range(2)] 
         #print self.vel[0], self.vel[1]
         
         self.pos[0] = (self.pos[0] + self.vel[0])%WIDTH
         self.pos[1] = (self.pos[1] + self.vel[1])%HEIGHT
        
-    
+    def shoot(self):
+        global a_missile
+        vect = angle_to_vector(self.angle)
+        cannon_pos = [self.pos[i] + self.radius * vect[i] for i in range(2)]
+        missile_v = [self.vel[i] + MISSILE_SPEED * vect[i] for i in range(2)]
+        a_missile = Sprite(cannon_pos, missile_v, 0, 0, missile_image, missile_info, missile_sound)
+
 # Sprite class
 class Sprite:
     def __init__(self, pos, vel, ang, ang_vel, image, info, sound = None):
@@ -155,7 +162,7 @@ class Sprite:
         self.pos[0] = (self.pos[0] + self.vel[0])%WIDTH
         self.pos[1] = (self.pos[1] + self.vel[1])%HEIGHT
         self.angle += self.angle_vel
-           
+    
 def draw(canvas):
     global time
     
@@ -189,9 +196,16 @@ def update_ship_angle_v(unit):
 def set_thrusters(flag):
     my_ship.set_thrusters(flag)
     
+def shoot_missile(toShoot):
+    if toShoot:
+        my_ship.shoot()
+    else:
+        missile_sound.rewind()
+        
 keyMap = {"left":[update_ship_angle_v,-ANGLE_V_UNIT,0], 
           "right":[update_ship_angle_v, ANGLE_V_UNIT,0],
-          "up": [set_thrusters, THRUSTERS_ON, THRUSTERS_OFF]}
+          "up": [set_thrusters, THRUSTERS_ON, THRUSTERS_OFF],
+          "space": [shoot_missile, True, False]}
 
 def keydown(key):
     for k in keyMap:
