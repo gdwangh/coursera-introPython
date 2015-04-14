@@ -82,7 +82,6 @@ def angle_to_vector(ang):
 def dist(p,q):
     return math.sqrt((p[0] - q[0]) ** 2+(p[1] - q[1]) ** 2)
 
-
 # Ship class
 ACC = 0.2
 FRACTION = 0.01
@@ -123,7 +122,7 @@ class Ship:
             self.vel = [speed * vect[0], speed * vect[1]]
                
         self.vel = [ (self.vel[n] + ACC * self.thrust * vect[n]) * (1-FRACTION) for n in range(2)] 
-        print self.vel[0], self.vel[1]
+        #print self.vel[0], self.vel[1]
         
         self.pos[0] = (self.pos[0] + self.vel[0])%WIDTH
         self.pos[1] = (self.pos[1] + self.vel[1])%HEIGHT
@@ -148,11 +147,14 @@ class Sprite:
             sound.play()
    
     def draw(self, canvas):
-        canvas.draw_circle(self.pos, self.radius, 1, "Red", "Red")
-    
+        # canvas.draw_circle(self.pos, self.radius, 1, "Red", "Red")
+        canvas.draw_image(self.image, self.image_center,
+                          self.image_size, self.pos, self.image_size, self.angle)
+        
     def update(self):
-        pass        
-
+        self.pos[0] = (self.pos[0] + self.vel[0])%WIDTH
+        self.pos[1] = (self.pos[1] + self.vel[1])%HEIGHT
+        self.angle += self.angle_vel
            
 def draw(canvas):
     global time
@@ -205,14 +207,20 @@ def keyup(key):
     
 # timer handler that spawns a rock    
 def rock_spawner():
-    pass
+    rock_vel = [random.randrange(-100,100)/60.0,random.randrange(-100,100)/60.0]
+    rock_angle_vel = random.randrange(-10,10)/100.0
+    rock_pos = [random.randrange(0,WIDTH),random.randrange(HEIGHT/3, HEIGHT*2/3)]
+
+    global a_rock
+    a_rock = Sprite(rock_pos, rock_vel, 0, rock_angle_vel, asteroid_image, asteroid_info)
+
     
 # initialize frame
 frame = simplegui.create_frame("Asteroids", WIDTH, HEIGHT)
 
 # initialize ship and two sprites
 my_ship = Ship([WIDTH / 2, HEIGHT / 2], [1, 0], 0, ship_image, ship_info)
-a_rock = Sprite([WIDTH / 3, HEIGHT / 3], [1, 1], 0, 0, asteroid_image, asteroid_info)
+a_rock = Sprite([WIDTH / 3, HEIGHT / 3], [1,1], 0, 0.05, asteroid_image, asteroid_info)
 a_missile = Sprite([2 * WIDTH / 3, 2 * HEIGHT / 3], [-1,1], 0, 0, missile_image, missile_info, missile_sound)
 
 # register handlers
