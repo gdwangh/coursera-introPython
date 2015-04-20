@@ -82,7 +82,7 @@ class Hand:
             if card.get_rank() == 'A':
                 aces_count += 1
                 
-        if (aces_count == 1) and (value + 10<21):
+        if (aces_count == 1) and (value + 10<= 21):
             value += 10
             
         return value
