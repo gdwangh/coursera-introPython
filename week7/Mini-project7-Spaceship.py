@@ -70,9 +70,16 @@ explosion_image = simplegui.load_image("http://commondatastorage.googleapis.com/
 
 # sound assets purchased from sounddogs.com, please do not redistribute
 soundtrack = simplegui.load_sound("http://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/soundtrack.mp3")
+
+# on firefox, mp3 is not supportted
 missile_sound = simplegui.load_sound("http://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/missile.mp3")
+# missile_sound = simplegui.load_sound("http://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/missile.ogg")
 missile_sound.set_volume(.5)
-ship_thrust_sound = simplegui.load_sound("http://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/thrust.mp3")
+
+# on firefox, mp3 is not supported
+ship_thrust_sound = simplegui.load_sound("http://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/thrust.mg3")
+# ship_thrust_sound = simplegui.load_sound("http://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/thrust.ogg")
+
 explosion_sound = simplegui.load_sound("http://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/explosion.mp3")
 
 # helper functions to handle transformations
@@ -174,7 +181,13 @@ def draw(canvas):
     canvas.draw_image(nebula_image, nebula_info.get_center(), nebula_info.get_size(), [WIDTH / 2, HEIGHT / 2], [WIDTH, HEIGHT])
     canvas.draw_image(debris_image, center, size, (wtime - WIDTH / 2, HEIGHT / 2), (WIDTH, HEIGHT))
     canvas.draw_image(debris_image, center, size, (wtime + WIDTH / 2, HEIGHT / 2), (WIDTH, HEIGHT))
+    
+    # draw title
+    global lives, score
+    canvas.draw_text("LIVES:"+str(lives), [50,50], 30, "WHITE")
+    canvas.draw_text("SCORE:"+str(score), [WIDTH-200,50], 30, "WHITE")
 
+    
     # draw ship and sprites
     my_ship.draw(canvas)
     a_rock.draw(canvas)
@@ -217,8 +230,6 @@ def keyup(key):
         if key == simplegui.KEY_MAP[k]:
             keyMap[k][0](keyMap[k][2])
             
-    
-    
 # timer handler that spawns a rock    
 def rock_spawner():
     rock_vel = [random.randrange(-100,100)/60.0,random.randrange(-100,100)/60.0]
